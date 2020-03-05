@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ReportActivity">
+
+
+    <ImageView
+        android:id="@+id/btnBackToMainPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_left_arrow" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBackToMainPage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtReportedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="73dp"
+                android:layout_marginLeft="73dp"
+                android:layout_marginTop="34dp"
+                android:layout_toEndOf="@+id/btnBackToMainPage"
+                android:layout_toRightOf="@+id/btnBackToMainPage"
+                android:text="Reported By"
+                android:textColor="@color/mainText"
+                android:textSize="19sp"
+                tools:ignore="NotSibling" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/reportByCard"
+                android:layout_width="230dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/txtReportedBy"
+                android:layout_marginStart="74dp"
+                android:layout_marginLeft="74dp"
+                android:layout_marginTop="9dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/primaryBlue"
+                app:strokeWidth="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/reportByCard"
+                    android:layout_alignBottom="@+id/reportByCard">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_user"
+                        android:tint="@color/primaryBlue" />
+
+                    <TextView
+                        android:id="@+id/txtReportedByUser"
+                        android:layout_width="104dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="39dp"
+                        android:layout_marginRight="39dp"
+                        android:layout_marginBottom="9dp"
+                        android:textColor="@color/mainText"
+                        android:textSize="18dp" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/txtReportOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reportByCard"
+                android:layout_marginStart="74dp"
+                android:layout_marginLeft="74dp"
+                android:layout_marginTop="20dp"
+                android:text="Reported On"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtReportOn"
+                android:layout_marginStart="74dp"
+                android:layout_marginLeft="74dp"
+                android:layout_marginTop="9dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtReportOn"
+                android:layout_toRightOf="@id/txtDate"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="9dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnDate"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDate"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_gradient_button"
+                android:drawableRight="@drawable/ic_calendar"
+                android:paddingRight="20dp"
+                android:text="Date"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteText"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/btnTime"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDate"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="210dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginRight="76dp"
+                android:background="@drawable/round_gradient_button"
+                android:drawableRight="@drawable/ic_time"
+                android:paddingRight="20dp"
+                android:text="Time"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteText"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtReportType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnDate"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Report Type"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <Spinner
+                android:id="@+id/reportTypeSpinner"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txtReportType"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/spinner_background"
+                android:entries="@array/report_type"
+                android:spinnerMode="dialog"
+                android:prompt="@string/type"/>
+
+
+            <TextView
+                android:id="@+id/txtSeriousness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reportTypeSpinner"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Seriousness"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <Spinner
+                android:id="@+id/seriousnessSpinner"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txtSeriousness"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="-46dp"
+                android:background="@drawable/spinner_background"
+                android:entries="@array/seriousness"
+                android:spinnerMode="dialog"
+                android:prompt="@string/seriousness">
+
+            </Spinner>
+
+            <TextView
+                android:id="@+id/txtDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtSeriousness"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="65dp"
+                android:text="Situation Details"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@+id/editTextDetails"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/txtDetails"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/spinner_background" />
+
+            <TextView
+                android:id="@+id/txtAttachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextDetails"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Attachments"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <LinearLayout
+                android:id="@+id/attachmentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtAttachment"
+                android:layout_alignLeft="@id/reportByCard"
+                android:layout_marginTop="9dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgCamera"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rounded_blue_background"
+                        android:src="@drawable/ic_camera" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Camera"
+                        android:textColor="@color/mainText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgLibrary"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rounded_blue_background"
+                        android:src="@drawable/ic_folder" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Library"
+                        android:textColor="@color/mainText" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtImageURL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textSize="15sp"
+                android:text=""
+                android:textColor="@color/lightText"
+                android:layout_alignLeft="@id/reportByCard"
+                android:layout_below="@id/attachmentType"/>
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtImageURL"
+                android:layout_alignLeft="@id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Location"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <LinearLayout
+                android:id="@+id/mapLayout"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtLocation"
+                android:layout_alignLeft="@id/reportByCard"
+                android:layout_marginTop="9dp">
+
+                <EditText
+
+                    android:id="@+id/editLocation"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/left_round_right_flat_blue_stroke"
+                    android:focusable="false"
+                    android:textSize="14sp"/>
+
+                <Button
+                    android:id="@+id/btnMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/left_flat_right_round_full_blue"
+                    android:gravity="center"
+                    android:text="Map"
+                    android:textColor="@color/whiteText" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtErrorMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@+id/mapLayout"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/dangerRed"
+                android:textSize="20sp"
+                />
+
+            <ProgressBar
+                android:id="@+id/report_progress"
+                android:layout_width="match_parent"
+                android:layout_below="@id/txtErrorMsg"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"/>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/report_progress"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/background_gradient"
+                android:text="Submit"
+                android:textColor="@color/whiteText"
+                android:textSize="19sp"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

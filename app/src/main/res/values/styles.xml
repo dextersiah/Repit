@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryDark">@color/mainText</item>
+        <item name="colorAccent">@color/primaryBlue</item>
+        <item name="android:fontFamily">@font/varela_round</item>
+    </style>
+
+
+    <style name="progressBarBlue" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/whiteText</item>
+    </style>
+
+    <style name="error">
+        <item name="stColorBackground">@color/whiteText</item>
+        <item name="stTextColor">@color/dangerRed</item>
+        <item name="stStrokeWidth">1dp</item>
+        <item name="stStrokeColor">@color/dangerRed</item>
+        <item name="stRadius">5dp</item>
+        <item name="stLength">SHORT</item>
+    </style>
+
+
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/primaryBlue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="stTextSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whiteText"
+    tools:context=".MenuActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-73dp"
+            android:src="@drawable/ic_profile" />
+
+
+        <ImageView
+            android:id="@+id/btnBackHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_cross" />
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profileImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            app:civ_border_width="1dp"
+            tools:layout_editor_absoluteY="742dp" />
+
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="134dp"
+            android:textAlignment="center"
+            android:textColor="@color/whiteText"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="260dip"
+            android:layout_height="50dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_gradient_button"
+            android:drawableLeft="@drawable/ic_user"
+            android:paddingLeft="20dip"
+            android:paddingRight="60dip"
+            android:singleLine="true"
+            android:text="Profile"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteText"
+            android:textSize="17dip" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/background_gradient"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteText"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/edit_profile_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        android:layout_alignParentBottom="true"></FrameLayout>
+
+</RelativeLayout>

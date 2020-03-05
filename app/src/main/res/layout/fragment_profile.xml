@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="470dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/whiteText"
+    tools:context=".ProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/fields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginRight="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/firstNameField"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryBlue"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/primaryBlue"
+            android:inputType="textPersonName"
+            android:textColor="@color/mainText"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/lastNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/primaryBlue"
+            android:inputType="textPersonName"
+            android:textColor="@color/mainText"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/changeProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/fields"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="168dp"
+        android:text="Change Profile Picture"
+        android:textColor="@color/primaryBlue" />
+
+    <TextView
+        android:id="@+id/responseMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changeProfile"
+        android:layout_alignLeft="@id/changeProfile"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-160dp"
+        android:text="" />
+
+
+    <ProgressBar
+        android:id="@+id/editProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="138dp" />
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/round_gradient_button"
+        android:text="Edit"
+        android:textAllCaps="false"
+        android:textColor="@color/whiteText"
+        android:textSize="17dp" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/round_blue_stroke"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/primaryBlue"
+        android:textSize="17dp" />
+
+
+</RelativeLayout>

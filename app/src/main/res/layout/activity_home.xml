@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_menu" />
+
+            <ToggleButton
+                android:id="@+id/publicReport"
+                android:layout_width="121dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="18dp"
+                android:layout_toRightOf="@id/menu"
+                android:background="@drawable/public_selector"
+                android:text="PUBLIC"
+                android:textOff="PUBLIC"
+                android:textOn="PUBLIC"
+                android:textColor="@color/whiteText"
+                android:textSize="11sp" />
+
+            <ToggleButton
+                android:id="@+id/myReport"
+                android:layout_width="121dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="17dp"
+                android:textColor="@color/primaryBlue"
+                android:layout_marginBottom="18dp"
+                android:layout_toRightOf="@id/publicReport"
+                android:background="@drawable/my_selector"
+                android:text="MY COMPLAINT"
+                android:textOff="MY COMPLAINT"
+                android:textOn="MY COMPLAINT"
+                android:textSize="11sp"
+                android:layout_toEndOf="@id/publicReport" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ProgressBar
+                android:id="@+id/loadItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_black_24dp" />
+
+
+    <FrameLayout
+        android:id="@+id/menu_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

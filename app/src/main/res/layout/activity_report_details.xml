@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportDetailsActivity">
+
+    <ImageView
+        android:id="@+id/btnBackToMainPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_left_arrow" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBackToMainPage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtReportedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                android:layout_marginStart="73dp"
+                android:layout_marginLeft="73dp"
+                android:layout_marginTop="34dp"
+                android:layout_toEndOf="@+id/btnBackToMainPage"
+                android:layout_toRightOf="@+id/btnBackToMainPage"
+                android:text="Reported By"
+                android:textColor="@color/mainText"
+                android:textSize="19sp"
+                tools:ignore="NotSibling" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/reportByCard"
+                android:layout_width="230dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/txtReportedBy"
+                android:layout_marginStart="74dp"
+                android:layout_marginLeft="74dp"
+                android:layout_marginTop="9dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/primaryBlue"
+                app:strokeWidth="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/reportByCard"
+                    android:layout_alignBottom="@+id/reportByCard">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_user"
+                        android:tint="@color/primaryBlue" />
+
+                    <TextView
+                        android:id="@+id/txtReportedByUser"
+                        android:layout_width="104dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="39dp"
+                        android:layout_marginRight="39dp"
+                        android:layout_marginBottom="9dp"
+                        android:textColor="@color/mainText"
+                        android:textSize="18dp" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/txtReportOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reportByCard"
+                android:textStyle="bold"
+                android:layout_marginStart="74dp"
+                android:layout_marginLeft="74dp"
+                android:layout_marginTop="20dp"
+                android:text="Reported On"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtReportOn"
+                android:layout_marginStart="74dp"
+                android:layout_marginLeft="74dp"
+                android:text=""
+                android:layout_marginTop="9dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtReportOn"
+                android:text=""
+                android:layout_toRightOf="@id/txtDate"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="9dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtReportType"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTime"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Report Type"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/valReportType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtReportType"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="9dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold"  />
+
+            <TextView
+                android:id="@+id/txtSeriousness"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valReportType"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Seriousness"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/valSeriousness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSeriousness"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="9dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtSituation"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valSeriousness"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Situation Details"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/valSituation"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSituation"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="9dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtAttachment"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valSituation"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Attachments"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+
+            <ImageView
+                android:id="@+id/imgAttachment"
+                android:layout_width="270dp"
+                android:layout_height="150dp"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_below="@+id/txtAttachment"
+                android:layout_marginTop="9dp"
+                />
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgAttachment"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Location"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/valLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLocation"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="70dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valLocation"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="20dp"
+                android:text="Status"
+                android:textColor="@color/mainText"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/valStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtStatus"
+                android:layout_alignStart="@+id/reportByCard"
+                android:layout_alignLeft="@+id/reportByCard"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="100dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

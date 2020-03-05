@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Repit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="type">Select A Type</string>
+    <string name="seriousness">Select The Seriousness</string>
+    <string-array name="report_type">
+        <item>Select A Category</item>
+        <item>Pothole</item>
+        <item>Traffic Light</item>
+        <item>Tree/Grass</item>
+        <item>Garbage</item>
+        <item>Drain</item>
+        <item>Signboard/Ads</item>
+        <item>Public Restroom</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="seriousness">
+        <item>How serious is the problem?</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+</resources>

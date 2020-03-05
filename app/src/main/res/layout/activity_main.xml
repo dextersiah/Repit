@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:focusableInTouchMode="true"
+    tools:context=".LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/varela_round"
+            android:text="I-Repit"
+            android:textAlignment="center"
+            android:textColor="@color/whiteText"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/emailLoginField"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/whiteText"
+            android:drawableStart="@drawable/ic_email"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="20dp"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/whiteText"
+            android:textColorHint="@color/hintText"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/passwordLoginField"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/whiteText"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="20dp"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:textColor="@color/whiteText"
+            android:textColorHint="@color/hintText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/successMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/loginProcess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/progressBarBlue" />
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_white_background"
+            android:onClick="signIn"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="@color/primaryBlue"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/varela_round"
+            android:text="OR"
+            android:textAlignment="center"
+            android:textColor="@color/whiteText"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_white_background"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/primaryBlue"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/wave"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@drawable/ic_wave"
+            android:translationY="-100dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/sign_up_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</RelativeLayout>

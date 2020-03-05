@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="20dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/seriousness"
+            android:layout_width="10dp"
+            android:layout_height="90dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/seriousness"
+            android:layout_toEndOf="@+id/seriousness"
+            android:text="TRAFFIC LIGHT"
+            android:layout_toRightOf="@+id/seriousness"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/acceptedIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/text_view_title"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/text_view_title"
+            android:layout_toRightOf="@id/text_view_title"
+            android:src="@drawable/ic_tick"
+            app:civ_border_color="#01C50A"
+            app:civ_border_width="2dp" />
+
+
+        <TextView
+            android:id="@+id/text_view_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_title"
+            android:layout_toStartOf="@+id/seeDetails"
+            android:layout_toLeftOf="@+id/seeDetails"
+            android:layout_toEndOf="@id/seriousness"
+            android:layout_toRightOf="@id/seriousness"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/text_view_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_description"
+            android:layout_toEndOf="@id/seriousness"
+            android:layout_toRightOf="@id/seriousness"
+            android:maxLines="1"
+            android:layout_marginBottom="8dp"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/text_view_report_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_description"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/text_view_date"
+            android:layout_toRightOf="@id/text_view_date"
+            android:maxLines="1"
+            android:textSize="14dp" />
+
+
+        <ImageButton
+            android:id="@+id/seeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_arrow_right"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

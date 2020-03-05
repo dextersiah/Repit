@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gradientStart">#3393FF</color>
+    <color name="gradientEnd">#20A5FE</color>
+    <color name="primaryBlue">#4099FD</color>
+    <color name="lightText">#808080</color>
+    <color name="mainText">#484848</color>
+    <color name="warningYellow">#FFF000</color>
+    <color name="dangerRed">#ff574d</color>
+    <color name="whiteText">#FFFFFF</color>
+    <color name="hintText">#70FFFFFF</color>
+    <color name="correctGreen">#01C50A</color>
+    <color name="darkerGreen">#2E7D32</color>
+</resources>
